@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 1152px;
+}
+
+#name,
+#surname,
+#color {
+  text-decoration: underline;
+}
+
+[id*="_word"] {
+  position: relative;
+  display: inline-block;
+  animation: out_of_screen 1s 1;
+}
+
+#password {
+  position: relative;
+  color: #ff0000;
+  animation: out_of_screen 3s 1;
+}
+
+#emoji {
+  font-size: 100px;
+}
+
+#first_word {
+  animation-delay: 4s;
+}
+
+#second_word {
+  animation-delay: 5s;
+}
+
+#third_word {
+  animation-delay: 6s;
+}
+
+#fourth_word {
+  animation-delay: 7s;
+}
+
+#fifth_word {
+  animation-delay: 8s;
+}
+
+#password {
+  animation-delay: 9s;
+}
+
+
+@keyframes out_of_screen {
+  0% {
+    z-index: 1;
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(5);
+  }
+  60% {
+    transform: scale(5) rotate(0deg);
+  }
+  100% {
+    z-index: 1;
+    transform: scale(1) rotate(-360deg);
+  }
+}
